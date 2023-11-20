@@ -66,7 +66,7 @@ if( isset($_POST["submit"]) ) {
 <form action="" method="POST" enctype="multipart/form-data">
 	<div class=" card bg-secondary rounded mt-3 mb-3">
 		<div class="card-header py-3 bg-light">
-			<h5 class="m-0 text-white">Tambah Data Pengguna</h5>
+			<h5 class="m-0 text-white">Tambah Data Posisi</h5>
 		</div>
         
 		<div class="card-body bg-secondary">
@@ -84,7 +84,7 @@ if( isset($_POST["submit"]) ) {
 
                 <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">jenis_posisi</label>
-					<input required type="text" class="mt-1 mb-3 form-control"  name="alamat" placeholder="Masukkan Alamat" id="alamat">
+					<input required type="text" class="mt-1 mb-3 form-control"  name="alamat" placeholder="Masukkan jenis posisi" id="alamat">
                 </div>
 
 

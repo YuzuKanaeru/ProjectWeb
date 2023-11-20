@@ -40,6 +40,18 @@ ob_start();
 <h1 class="text-center mb-5 text-white">DASHBOARD</h1>
 
 <marquee><h1 class="gradient-text text-center mb-5 mt-5 ">ALOOOOOOOOOOO :)</h1></marquee>
+<div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Doughnut Chart</h6>
+                            <canvas id="doughnut-chart"></canvas>
+                        </div>
+                    </div>
+
+
+
+                    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../aset/lib/chart/chart.min.js"></script>
+<script src="../aset/js/main.js"></script>
 
 
 <?php

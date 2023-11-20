@@ -75,18 +75,18 @@ ob_start();
 			<div class="form mt-3 row">
                 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput2">id Ketua</label>
+					<label for="formGroupExampleInput2">Id Ketua</label>
 					<input  type="text" class=" mt-1 mb-3 form-control" name="id_ketua" value="<?= $swa["id_ketua"] ?>" id_ketua="id_ketua" readonly>
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nis</label>
+					<label for="formGroupExampleInput">Nis</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="nis" value="<?= $swa["nis"] ?>" nis="nis">
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nama lengkap</label>
-					<input required type="text" class="mt-1 mb-3 form-control"  name="nama_lengkap" value="<?= $swa["nama_lengkap"] ?>" nama_lengkap="nama_lengkap">
+					<label for="formGroupExampleInput">Nama Lengkap</label>
+					<input required type="text" class="mt-1 mb-3 form-control"  name="nama_ketua" value="<?= $swa["nama_ketua"] ?>" nama_ketua="nama_ketua">
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -99,12 +99,12 @@ ob_start();
 </div>
 
 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">kelas</label>
+					<label for="formGroupExampleInput">Kelas</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="kelas" value="<?= $swa["kelas"] ?>" kelas="kelas">
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nomor hp</label>
+					<label for="formGroupExampleInput">Nomor Hp</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="nomor_hp" value="<?= $swa["nomor_hp"] ?>" nomor_hp="nomor_hp">
                 </div>
 

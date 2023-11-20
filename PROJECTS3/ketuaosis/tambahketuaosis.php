@@ -83,13 +83,13 @@ if( isset($_POST["submit"]) ) {
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nis</label>
+					<label for="formGroupExampleInput">Nis</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="nis" placeholder="Masukkan Nis"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nama lengkap</label>
-					<input required type="text" class="mt-1 mb-3 form-control" name="nama_lengkap" placeholder="Masukkan nama lengkap"  >
+					<label for="formGroupExampleInput">Nama Lengkap</label>
+					<input required type="text" class="mt-1 mb-3 form-control" name="nama_ketua" placeholder="Masukkan nama lengkap"  >
                 </div>
 
 				<div class="form-group col-sm-6">

@@ -77,27 +77,27 @@ if( isset($_POST["submit"]) ) {
                 </div> -->
 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id kandidat</label>
+					<label for="formGroupExampleInput">Id Kandidat</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="id_kandidat" placeholder="Masukkan id kandidat"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">visi</label>
+					<label for="formGroupExampleInput">Visi</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="visi" placeholder="Masukkan visi baru"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">misi</label>
+					<label for="formGroupExampleInput">Misi</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="misi" placeholder="Masukkan misi baru"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id ketua</label>
+					<label for="formGroupExampleInput">Id Ketua</label>
 					<input type="text" class="mt-1 mb-3 form-control" name="id_ketua" placeholder="Masukkan id ketua"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id wakil</label>
+					<label for="formGroupExampleInput">Id Wakil</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="id_wakil" placeholder="Masukkan id wakil"  >
                 </div>
 

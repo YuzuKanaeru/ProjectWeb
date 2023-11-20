@@ -78,7 +78,7 @@ if( isset($_POST["submit"]) ) {
                 </div> -->
 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nis/nip</label>
+					<label for="formGroupExampleInput">Nis/Nip</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="nis_nip" placeholder="Masukkan Nis Atau Nip"  >
                 </div>
 
@@ -93,6 +93,11 @@ if( isset($_POST["submit"]) ) {
                 <option value="Laki - Laki">Laki - Laki</option>
                 <option value="Perempuan">Perempuan</option>
                 </select>
+                </div>
+
+                <div class="form-group col-sm-6">
+					<label for="formGroupExampleInput">Kelas</label>
+					<input required type="text" class="mt-1 mb-3 form-control" name="kelas" placeholder="Masukkan Kelas"  >
                 </div>
 
                 <!-- <div class="form-group col-sm-6">
@@ -116,18 +121,18 @@ if( isset($_POST["submit"]) ) {
                     </div> -->
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id posisi</label>
+					<label for="formGroupExampleInput">Id Posisi</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="id_posisi" placeholder="Masukkan Id Posisi"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">status</label>
+					<label for="formGroupExampleInput">Status</label>
 					<input type="text" class="mt-1 mb-3 form-control" name="status" placeholder="Masukkan Status"  >
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">password</label>
-					<input required type="text" class="mt-1 mb-3 form-control" name="pass" placeholder="Masukkan Password"  >
+					<label for="formGroupExampleInput">Pasword</label>
+					<input required type="text" class="mt-1 mb-3 form-control" name="pass" placeholder="Masukkan Pasword"  >
                 </div>
 
 				<div class="dasd mt-2 mb-2">

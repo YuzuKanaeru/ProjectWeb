@@ -14,12 +14,19 @@ ob_start();
 ?>
 
 <?php
+
+
 require '../KONEKSI/koneksi.php';
-$query=query("SELECT * FROM tb_kandidat");
+
+$query = "SELECT k.id_kandidat, k.visi, k.misi, ketua.nama_ketua, wakil.nama_wakil
+          FROM tb_kandidat k
+          LEFT JOIN tb_ketuaosis ketua ON k.id_ketua = ketua.id_ketua
+          LEFT JOIN tb_wakilosis wakil ON k.id_wakil = wakil.id_wakil";
+$data = query($query);
 
 ?>
         
-        <a href="tambahkandidat.php" type="button" class="btn btn-info fw-bold text-white mb-4">Tambah Kandidat</a>
+        <a href="tambahkandidat.php" type="button" class="btn btn-info fw-bold text-white mb-4">Tambah Data</a>
         
         <div class="col-sm-12 ">
 		<div class="card-header py-3 bg-light">
@@ -30,11 +37,11 @@ $query=query("SELECT * FROM tb_kandidat");
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">id_kandidat</th>
-                                        <th scope="col">visi</th>
-                                        <th scope="col">misi</th>
-                                        <th scope="col">id_ketua</th>
-                                        <th scope="col">id_wakil</th>
+                                        <th scope="col">Id Kandidat</th>
+                                        <th scope="col">Visi</th>
+                                        <th scope="col">Misi</th>
+                                        <th scope="col">Nama Ketua</th>
+                                        <th scope="col">Nama Wakil</th>
                                         <th scope="col">Aksi</th>
                                        
 
@@ -43,23 +50,22 @@ $query=query("SELECT * FROM tb_kandidat");
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php $a=1; ?>
-                                <?php foreach ($query as $getdata): ?>
+                             
+                                <?php foreach ($data as $item): ?>
                                 <tr>
-                               
-                                        <td><?= $getdata["id_kandidat"]; ?></td>
-                                        <td><?= $getdata["visi"]; ?></td>
-                                        <td><?= $getdata["misi"]; ?></td>
-                                        <td><?= $getdata["id_ketua"]; ?></td>
-                                        <td><?= $getdata["id_wakil"]; ?></td>
-                                        <td>
-                                        <a class="btn btn-success text-white fw-bold" href="editkandidat.php?id_kandidat=<?= $getdata["id_kandidat"]; ?>">Edit</a>
+                                <td><?= $item["id_kandidat"]; ?></td>
+                                <td><?= $item["visi"]; ?></td>
+                                <td><?= $item["misi"]; ?></td>
+                                <td><?= $item["nama_ketua"]; ?></td>
+                                <td><?= $item["nama_wakil"]; ?></td>
+                                <td>
+                                    <a class="btn btn-success text-white fw-bold" href="editkandidat.php?id_kandidat=<?= $item["id_kandidat"]; ?>">Edit</a>
 
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?=$getdata["id_kandidat"];?>" >Hapus</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?=$item["id_kandidat"];?>" >Hapus</button>
                                                                                                                    
-                                        </td>
-                                    </tr>
-                                    <?php  $a++; ?>
+                                </td>
+                                </tr>
+                                 
                                     <?php endforeach; ?>
                                     
                                 </tbody>
@@ -68,13 +74,13 @@ $query=query("SELECT * FROM tb_kandidat");
                         </div>
                     </div>
 
-                    <?php foreach ($query as $getdataa): ?>
+                    <?php foreach ($data as $getdataa): ?>
 
     <div class="modal fade" id="hapus<?= $getdataa["id_kandidat"]; ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog ">
             <div class="modal-content bg-secondary">
                 <div class="modal-body">
-                    <h5 class="mt-1 mb-1 text-center">Apakah kamu ingin menghapus nama <?= $getdataa["nama_lengkap"]; ?> </h5>
+                    <h5 class="mt-1 mb-1 text-center">Apakah kamu ingin menghapus id kandidat <?= $getdataa["id_kandidat"]; ?> </h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Tidak</button>

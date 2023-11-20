@@ -30,12 +30,12 @@ $query=query("SELECT * FROM tb_ketuaosis");
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">id ketua</th>
-                                        <th scope="col">nis</th>
-                                        <th scope="col">nama lengkap</th>
-                                        <th scope="col">jenis kelamin</th>
-                                        <th scope="col">kelas</th>
-                                        <th scope="col">no hp</th>
+                                        <th scope="col">Id Ketua</th>
+                                        <th scope="col">Nis</th>
+                                        <th scope="col">Nama Lengkap</th>
+                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Kelas</th>
+                                        <th scope="col">No Hp</th>
                                         <th scope="col">Aksi</th>
                                        
 
@@ -50,7 +50,7 @@ $query=query("SELECT * FROM tb_ketuaosis");
                                
                                         <td><?= $getdata["id_ketua"]; ?></td>
                                         <td><?= $getdata["nis"]; ?></td>
-                                        <td><?= $getdata["nama_lengkap"]; ?></td>
+                                        <td><?= $getdata["nama_ketua"]; ?></td>
                                         <td><?= $getdata["jenis_kelamin"]; ?></td>
                                         <td><?= $getdata["kelas"]; ?></td>
                                         <td><?= $getdata["nomor_hp"]; ?></td>
@@ -76,7 +76,7 @@ $query=query("SELECT * FROM tb_ketuaosis");
         <div class="modal-dialog ">
             <div class="modal-content bg-secondary">
                 <div class="modal-body">
-                    <h5 class="mt-1 mb-1 text-center">Apakah kamu ingin menghapus nama <?= $getdataa["nama_lengkap"]; ?> </h5>
+                    <h5 class="mt-1 mb-1 text-center">Apakah kamu ingin menghapus nama <?= $getdataa["nama_ketua"]; ?> </h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Tidak</button>

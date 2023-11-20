@@ -75,12 +75,12 @@ ob_start();
 			<div class="form mt-3 row">
                 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput2">nis/nip</label>
+					<label for="formGroupExampleInput2">Nis/Nip</label>
 					<input  type="text" class=" mt-1 mb-3 form-control" name="nis_nip" value="<?= $swa["nis_nip"] ?>" nis_nip="nis_nip" readonly>
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">nama lengkap</label>
+					<label for="formGroupExampleInput">Nama Lengkap</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="nama_lengkap" value="<?= $swa["nama_lengkap"] ?>" namalengkap="nama_lengkap">
                 </div>
 
@@ -93,6 +93,10 @@ ob_start();
     </select>
 </div>
 
+<div class="form-group col-sm-6">
+					<label for="formGroupExampleInput">Kelas</label>
+					<input  type="text" class="mt-1 mb-3 form-control"  name="kelas" value="<?= $swa["kelas"] ?>" kelas="kelas">
+                </div>
 
 <!-- <div class="form-group col-sm-6">
                     <label for="formGroupExampleInput text-dark">nama posisi</label>
@@ -121,7 +125,7 @@ ob_start();
                 </div> -->
 
                 <div class="form-group col-sm-6">
-    <label for="formGroupExampleInput2 text-dark">nama posisi</label>
+    <label for="formGroupExampleInput2 text-dark">Nama Posisi</label>
     <select required name="id_posisi" class="form-select mt-1 mb-3" aria-label="Default select example">
         <option selected value="<?= $swa["id_posisi"] ?>"><?= $swa["id_posisi"] ?></option>
         <option value="01">admin</option>
@@ -131,12 +135,12 @@ ob_start();
 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">status</label>
+					<label for="formGroupExampleInput">Status</label>
 					<input  type="text" class="mt-1 mb-3 form-control"  name="status" value="<?= $swa["status"] ?>" status="satus">
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">pass</label>
+					<label for="formGroupExampleInput">Pasword</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="pass" value="<?= $swa["pass"] ?>" pass="pass">
                 </div>
 

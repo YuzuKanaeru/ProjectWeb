@@ -76,7 +76,7 @@ ob_start();
                 
 				<div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">id_posisi</label>
-					<input  type="text" class=" mt-1 mb-3 form-control" name="id_posisi" value="<?= $swa["id_posisi"] ?>" readonly>
+					<input  type="text" class=" mt-1 mb-3 form-control" name="id_posisi" value="<?= $swa["id_posisi"] ?>" >
                 </div>
 
 				<div class="form-group col-sm-6">
@@ -95,7 +95,7 @@ ob_start();
 
 
 <div class="dasd">
-<button type="submit" name="submit" class=" mb-5 mt-4 btn dasd btn-danger"><a class="text-white" href="pengguna.php">Kembali</a> </button>
+<button type="submit" name="submit" class=" mb-5 mt-4 btn dasd btn-danger"><a class="text-white" href="posisi.php">Kembali</a> </button>
 </div>
 
 <br>

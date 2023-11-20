@@ -86,7 +86,7 @@ ob_start();
 
                 <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">nama lengkap</label>
-					<input required type="text" class="mt-1 mb-3 form-control"  name="nama_lengkap" value="<?= $swa["nama_lengkap"] ?>" nama_lengkap="nama_lengkap">
+					<input required type="text" class="mt-1 mb-3 form-control"  name="nama_wakil" value="<?= $swa["nama_wakil"] ?>" nama_wakil="nama_wakil">
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -148,7 +148,7 @@ ob_start();
 
 
 <div class="dasd">
-<button type="submit" name="submit" class=" mb-5 mt-4 btn dasd btn-danger"><a class="text-white" href="ketuaosis.php">Kembali</a> </button>
+<button type="submit" name="submit" class=" mb-5 mt-4 btn dasd btn-danger"><a class="text-white" href="wakilosis.php">Kembali</a> </button>
 </div>
 
 <br>

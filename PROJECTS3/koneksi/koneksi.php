@@ -33,6 +33,7 @@ function hapusakun($nis_nip){
 		$nisnip = $data["nis_nip"];
 		$namalengkap = htmlspecialchars($data["nama_lengkap"]);
 		$jeniskelamin = htmlspecialchars($data["jenis_kelamin"]);
+		$kelas = htmlspecialchars($data["kelas"]);
 		$idposisi = htmlspecialchars($data["id_posisi"]);
 		$status = htmlspecialchars($data["status"]);
 		$pass = htmlspecialchars($data["pass"]);
@@ -42,6 +43,7 @@ function hapusakun($nis_nip){
 		`nis_nip` = '$nisnip', 
 		`nama_lengkap` = '$namalengkap', 
 		`jenis_kelamin` = '$jeniskelamin',
+		`kelas` = '$kelas',
 		`id_posisi` = '$idposisi', 
 		`status` = '$status', 
 		`pass` = '$pass' 
@@ -60,30 +62,19 @@ function hapusakun($nis_nip){
 		$nisnip = htmlspecialchars($data["nis_nip"]);
 		$namalengkap = htmlspecialchars($data["nama_lengkap"]);
 		$jeniskelamin = htmlspecialchars($data["jenis_kelamin"]);
+		$kelas = htmlspecialchars($data["kelas"]);
 		$idposisi = htmlspecialchars($data["id_posisi"]);
 		$status = htmlspecialchars($data["status"]);
 		$pass = htmlspecialchars($data["pass"]);
 
 
-		$query = "INSERT INTO `tb_akun` (`nis_nip`, `nama_lengkap`, `jenis_kelamin`, `id_posisi`, `status`, `pass`) 
-		VALUES ('$nisnip', '$namalengkap', '$jeniskelamin', '$idposisi', '$status', '$pass');";
+		$query = "INSERT INTO `tb_akun` (`nis_nip`, `nama_lengkap`, `jenis_kelamin`, `kelas`, `id_posisi`, `status`, `pass`) 
+		VALUES ('$nisnip', '$namalengkap', '$jeniskelamin', '$kelas', '$idposisi', '$status', '$pass');";
 		
 		mysqli_query($koneksi, $query);
 	
 		return mysqli_affected_rows($koneksi);
 	}
-
-
-
-	//	// C-R-U-D / Lapangan  //  //
-function hapuslapangan($id){
-    global $koneksi;
-    mysqli_query($koneksi, "DELETE FROM lapangan WHERE id_lapangan=$id");
-    return mysqli_affected_rows($koneksi);
-}
-
-
-
 
 
 
@@ -140,7 +131,7 @@ function hapusketuaosis($id_ketua){
 	
 		$id_ketua = $data["id_ketua"];
 		$nis = htmlspecialchars($data["nis"]);
-		$nama_lengkap = htmlspecialchars($data["nama_lengkap"]);
+		$nama_ketua = htmlspecialchars($data["nama_ketua"]);
 		$jenis_kelamin = htmlspecialchars($data["jenis_kelamin"]);
 		$kelas = htmlspecialchars($data["kelas"]);
 		$nomor_hp = htmlspecialchars($data["nomor_hp"]);
@@ -149,7 +140,7 @@ function hapusketuaosis($id_ketua){
 		$query = "UPDATE `tb_ketuaosis` SET 
 		`id_ketua` = '$id_ketua', 
 		`nis` = '$nis', 
-		`nama_lengkap` = '$nama_lengkap',
+		`nama_ketua` = '$nama_ketua',
 		`jenis_kelamin` = '$jenis_kelamin', 
 		`kelas` = '$kelas', 
 		`nomor_hp` = '$nomor_hp' 
@@ -167,14 +158,14 @@ function hapusketuaosis($id_ketua){
 	
 		$id_ketua = htmlspecialchars($data["id_ketua"]);
 		$nis = htmlspecialchars($data["nis"]);
-		$nama_lengkap = htmlspecialchars($data["nama_lengkap"]);
+		$nama_ketua = htmlspecialchars($data["nama_ketua"]);
 		$jenis_kelamin = htmlspecialchars($data["jenis_kelamin"]);
 		$kelas = htmlspecialchars($data["kelas"]);
 		$nomor_hp = htmlspecialchars($data["nomor_hp"]);
 
 
-		$query = "INSERT INTO `tb_ketuaosis` (`id_ketua`, `nis`, `nama_lengkap`, `jenis_kelamin`, `kelas`, `nomor_hp`) 
-		VALUES ('$id_ketua', '$nis', '$nama_lengkap', '$jenis_kelamin', '$kelas', '$nomor_hp');";
+		$query = "INSERT INTO `tb_ketuaosis` (`id_ketua`, `nis`, `nama_ketua`, `jenis_kelamin`, `kelas`, `nomor_hp`) 
+		VALUES ('$id_ketua', '$nis', '$nama_ketua', '$jenis_kelamin', '$kelas', '$nomor_hp');";
 		
 		mysqli_query($koneksi, $query);
 	
@@ -198,7 +189,7 @@ function hapuswakilosis($id_wakil){
 	
 		$id_wakil = $data["id_wakil"];
 		$nis = htmlspecialchars($data["nis"]);
-		$nama_lengkap = htmlspecialchars($data["nama_lengkap"]);
+		$nama_wakil = htmlspecialchars($data["nama_wakil"]);
 		$jenis_kelamin = htmlspecialchars($data["jenis_kelamin"]);
 		$kelas = htmlspecialchars($data["kelas"]);
 		$nomor_hp = htmlspecialchars($data["nomor_hp"]);
@@ -207,7 +198,7 @@ function hapuswakilosis($id_wakil){
 		$query = "UPDATE `tb_wakilosis` SET 
 		`id_wakil` = '$id_wakil', 
 		`nis` = '$nis', 
-		`nama_lengkap` = '$nama_lengkap',
+		`nama_wakil` = '$nama_wakil',
 		`jenis_kelamin` = '$jenis_kelamin', 
 		`kelas` = '$kelas', 
 		`nomor_hp` = '$nomor_hp' 
@@ -225,14 +216,14 @@ function hapuswakilosis($id_wakil){
 	
 		$id_wakil = htmlspecialchars($data["id_wakil"]);
 		$nis = htmlspecialchars($data["nis"]);
-		$nama_lengkap = htmlspecialchars($data["nama_lengkap"]);
+		$nama_wakil = htmlspecialchars($data["nama_wakil"]);
 		$jenis_kelamin = htmlspecialchars($data["jenis_kelamin"]);
 		$kelas = htmlspecialchars($data["kelas"]);
 		$nomor_hp = htmlspecialchars($data["nomor_hp"]);
 
 
-		$query = "INSERT INTO `tb_wakilosis` (`id_wakil`, `nis`, `nama_lengkap`, `jenis_kelamin`, `kelas`, `nomor_hp`) 
-		VALUES ('$id_wakil', '$nis', '$nama_lengkap', '$jenis_kelamin', '$kelas', '$nomor_hp');";
+		$query = "INSERT INTO `tb_wakilosis` (`id_wakil`, `nis`, `nama_wakil`, `jenis_kelamin`, `kelas`, `nomor_hp`) 
+		VALUES ('$id_wakil', '$nis', '$nama_wakil', '$jenis_kelamin', '$kelas', '$nomor_hp');";
 		
 		mysqli_query($koneksi, $query);
 	

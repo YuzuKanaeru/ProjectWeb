@@ -30,12 +30,13 @@ $query=query("SELECT * FROM tb_akun");
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">nis/nip</th>
-                                        <th scope="col">nama_lengkap</th>
-                                        <th scope="col">jenis_kelamin</th>
-                                        <th scope="col">id_posisi</th>
-                                        <th scope="col">status</th>
-                                        <th scope="col">pass</th>
+                                        <th scope="col">Nis/Nip</th>
+                                        <th scope="col">Nama Lengkap</th>
+                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Kelas</th>
+                                        <th scope="col">Id Posisi</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Pasword</th>
                                         <th scope="col">Aksi</th>
                                        
 
@@ -51,6 +52,7 @@ $query=query("SELECT * FROM tb_akun");
                                         <td><?= $getdata["nis_nip"]; ?></td>
                                         <td><?= $getdata["nama_lengkap"]; ?></td>
                                         <td><?= $getdata["jenis_kelamin"]; ?></td>
+                                        <td><?= $getdata["kelas"]; ?></td>
                                         <td><?= $getdata["id_posisi"]; ?></td>
                                         <td><?= $getdata["status"]; ?></td>
                                         <td><?= $getdata["pass"]; ?></td>

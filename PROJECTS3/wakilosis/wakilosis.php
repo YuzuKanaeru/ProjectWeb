@@ -50,7 +50,7 @@ $query=query("SELECT * FROM tb_wakilosis");
                                
                                         <td><?= $getdata["id_wakil"]; ?></td>
                                         <td><?= $getdata["nis"]; ?></td>
-                                        <td><?= $getdata["nama_lengkap"]; ?></td>
+                                        <td><?= $getdata["nama_wakil"]; ?></td>
                                         <td><?= $getdata["jenis_kelamin"]; ?></td>
                                         <td><?= $getdata["kelas"]; ?></td>
                                         <td><?= $getdata["nomor_hp"]; ?></td>

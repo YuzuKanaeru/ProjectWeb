@@ -73,27 +73,27 @@ ob_start();
 			<div class="form mt-3 row">
                 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput2">id kandidat</label>
+					<label for="formGroupExampleInput2">Id <Kbd></Kbd>andidat</label>
 					<input  type="text" class=" mt-1 mb-3 form-control" name="id_kandidat" value="<?= $swa["id_kandidat"] ?>" id="id_kandidat" readonly>
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">visi</label>
+					<label for="formGroupExampleInput">Visi</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="visi" value="<?= $swa["visi"] ?>" visi="visi">
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">misi</label>
+					<label for="formGroupExampleInput">Misi</label>
 					<input  type="text" class="mt-1 mb-3 form-control"  name="misi" value="<?= $swa["misi"] ?>" misi="misi">
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id ketua</label>
+					<label for="formGroupExampleInput">Id Ketua</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="id_ketua" value="<?= $swa["id_ketua"] ?>" id="id_ketua">
                 </div>
 
                 <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id wakil</label>
+					<label for="formGroupExampleInput">Id Wakil</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="id_wakil" value="<?= $swa["id_wakil"] ?>" id="id_wakil">
                 </div>
 
