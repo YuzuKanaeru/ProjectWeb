@@ -73,7 +73,7 @@ ob_start();
 			<div class="form mt-3 row">
                 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput2">Id <Kbd></Kbd>andidat</label>
+					<label for="formGroupExampleInput2">Id Kandidat</label>
 					<input  type="text" class=" mt-1 mb-3 form-control" name="id_kandidat" value="<?= $swa["id_kandidat"] ?>" id="id_kandidat" readonly>
                 </div>
 
