@@ -85,6 +85,7 @@ if ($result->num_rows > 0) {
                     <a href="../wakilosis/wakilosis.php" class="nav-item nav-link<?= (basename($_SERVER['PHP_SELF']) == 'wakilosis.php') ? ' active' : ''; ?>"><i class="fa fa-user me-2"></i>Wakil Osis</a>
                     <a href="../kandidat/kandidat.php" class="nav-item nav-link<?= (basename($_SERVER['PHP_SELF']) == 'kandidat.php') ? ' active' : ''; ?>"><i class="fa fa-user me-2"></i>Kandidat</a>
                     <a href="../voting/voting.php" class="nav-item nav-link<?= (basename($_SERVER['PHP_SELF']) == 'voting.php') ? ' active' : ''; ?>"><i class="fa fa-keyboard me-2"></i>Voting</a>
+                    <a href="../datapoling/datapoling.php" class="nav-item nav-link<?= (basename($_SERVER['PHP_SELF']) == 'datapoling.php') ? ' active' : ''; ?>"><i class="fa fa-keyboard me-2"></i>Data Poling</a>
                     <!-- <a href="../voting/voting.php" class="nav-item nav-link<?= (basename($_SERVER['PHP_SELF']) == 'voting.php') ? ' active' : ''; ?>"><i class="fa fa-keyboard me-2"></i>Belum Voting</a>
                     <a href="../voting/voting.php" class="nav-item nav-link<?= (basename($_SERVER['PHP_SELF']) == 'voting.php') ? ' active' : ''; ?>"><i class="fa fa-keyboard me-2"></i>Sudah Voting</a> -->
                     <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Time </a> -->

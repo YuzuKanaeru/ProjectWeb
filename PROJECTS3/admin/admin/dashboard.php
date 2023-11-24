@@ -31,13 +31,14 @@ ob_start(); // Mulai output buffering
     }
 </style>
 
-<div class="text-center">
+<!-- <div class="text-center">
     <img src="https://i.giphy.com/media/QmH8OnsBQvC4yn8BnX/giphy.webp" width="300" height="300">
-</div>
+</div> -->
 
-<h1 class="text-center mb-5 text-white">DASHBOARD</h1>
+<!-- <h1 class="text-center mb-5 text-white">DASHBOARD</h1> -->
 
-<marquee><h1 class="gradient-text text-center mb-5 mt-5">ALOOOOOOOOOOO :)</h1></marquee>
+<!-- <marquee><h1 class="gradient-text text-center mb-5 mt-5">ALOOOOOOOOOOO :)</h1></marquee> -->
+<img src="../aset/img/dashboardweb.png" class="card-img-top" alt="..." style="width: 100%; height: auto;"><br><br>
 
 <?php
 // Koneksi database
@@ -48,6 +49,28 @@ $dbName = 'vosis';
 
 // Membuat koneksi
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+// Inisialisasi variabel jumlahSudahMemilih dan jumlahBelumMemilih
+$jumlahSudahMemilih = 0;
+$jumlahBelumMemilih = 0;
+
+// Query SQL untuk mendapatkan jumlah yang sudah memilih
+$querySudahMemilih = "SELECT COUNT(*) AS jumlah_memilih FROM tb_akun WHERE status = 'Sudah Voting'";
+$resultSudahMemilih = $db->query($querySudahMemilih);
+
+if ($resultSudahMemilih->num_rows > 0) {
+    $rowSudahMemilih = $resultSudahMemilih->fetch_assoc();
+    $jumlahSudahMemilih = $rowSudahMemilih['jumlah_memilih'];
+}
+
+// Query SQL untuk mendapatkan jumlah yang belum memilih
+$queryBelumMemilih = "SELECT COUNT(*) AS jumlah_belum_memilih FROM tb_akun WHERE status != 'Sudah Voting'";
+$resultBelumMemilih = $db->query($queryBelumMemilih);
+
+if ($resultBelumMemilih->num_rows > 0) {
+    $rowBelumMemilih = $resultBelumMemilih->fetch_assoc();
+    $jumlahBelumMemilih = $rowBelumMemilih['jumlah_belum_memilih'];
+}
 
 // Query SQL untuk mendapatkan informasi jumlah voting
 $query = "SELECT tb_kandidat.id_kandidat, COUNT(tb_voting.id_kandidat) AS jumlah_voting 
@@ -79,68 +102,75 @@ $infoQuery = "SELECT tb_kandidat.id_kandidat, tb_ketuaosis.nama_ketua, tb_wakilo
 $infoResult = $db->query($infoQuery);
 ?>
 
+<!-- Div utama yang membungkus kedua card -->
 <div class="row">
+    <!-- Card baru -->
     <div class="col-sm-12 col-xl-6">
-        <div class="bg-secondary rounded h-100 p-4">
-            <h6 class="mb-4">Doughnut Chart</h6>
-            <canvas id="doughnut-chart"></canvas>
+        <div class="bg-secondary rounded h-100 p-4" data-toggle="modal" data-target="#modalMemilih">
+            <h6 class="mb-4">Sudah Memilih</h6>
+            <p>Jumlah Akun yang Sudah Memilih: <?php echo $jumlahSudahMemilih; ?></p>
+            <!-- Ganti "isi tabel disini" sesuai dengan data yang ingin ditampilkan -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMemilihTable">
+                Tampilkan Tabel
+            </button>
         </div>
     </div>
 
     <!-- Card baru -->
     <div class="col-sm-12 col-xl-6">
-        <div class="bg-secondary rounded h-100 p-4">
-            <h6 class="mb-4">Jumlah Voting</h6>
+        <div class="bg-secondary rounded h-100 p-4" data-toggle="modal" data-target="#modalBelumMemilih">
+            <h6 class="mb-4">Belum Memilih</h6>
+            <p>Jumlah Akun yang Belum Memilih: <?php echo $jumlahBelumMemilih; ?></p>
+            <!-- Ganti "isi tabel disini" sesuai dengan data yang ingin ditampilkan -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBelumMemilihTable">
+                Tampilkan Tabel
+            </button>
+        </div>
+    </div>
+</div>
 
-            <?php
-            if ($infoResult->num_rows > 0) {
-                while ($infoRow = $infoResult->fetch_assoc()) {
-                    echo "<p>";
-                    echo "Nomor Kandidat: " . $infoRow['id_kandidat'] . "<br>";
-                    echo "Ketua: " . $infoRow['nama_ketua'] . "<br>";
-                    echo "Wakil Ketua: " . $infoRow['nama_wakil'] . "<br>";
-                    echo "Jumlah Voting: " . $infoRow['jumlah_voting'] . "<br>";
-                    echo "</p>";
-                }
-            } else {
-                echo "Tidak ada data kandidat.";
-            }
-            ?>
+<!-- Modal untuk Sudah Memilih -->
+<div class="modal fade" id="modalMemilihTable" tabindex="-1" role="dialog" aria-labelledby="modalMemilihTableLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMemilihTableLabel">Tabel Sudah Memilih</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Ganti "isi tabel disini" sesuai dengan data yang ingin ditampilkan -->
+                <table class="table">
+                    <!-- Isi tabel sesuai dengan data yang ingin ditampilkan -->
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal untuk Belum Memilih -->
+<div class="modal fade" id="modalBelumMemilihTable" tabindex="-1" role="dialog" aria-labelledby="modalBelumMemilihTableLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalBelumMemilihTableLabel">Tabel Belum Memilih</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Ganti "isi tabel disini" sesuai dengan data yang ingin ditampilkan -->
+                <table class="table">
+                    <!-- Isi tabel sesuai dengan data yang ingin ditampilkan -->
+                </table>
+            </div>
         </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="../aset/lib/chart/chart.min.js"></script>
 <script src="../aset/js/main.js"></script>
-
-<script>
-    (function ($) {
-        "use strict";
-
-        // Doughnut Chart
-        var ctx6 = $("#doughnut-chart").get(0).getContext("2d");
-        var myChart6 = new Chart(ctx6, {
-            type: "doughnut",
-            data: {
-                labels: <?php echo json_encode($dataLabels); ?>,
-                datasets: [{
-                    backgroundColor: [
-                        "rgba(118, 22, 22, .7)",
-                        "rgba(235, 22, 22, .6)",
-                        "rgba(235, 22, 22, .5)",
-                        "rgba(235, 22, 22, .4)",
-                        "rgba(235, 22, 22, .3)"
-                    ],
-                    data: <?php echo json_encode($dataValues); ?>
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-    })(jQuery);
-</script>
 
 <?php
 $konten = ob_get_clean();
