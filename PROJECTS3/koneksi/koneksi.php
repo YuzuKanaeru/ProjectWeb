@@ -55,7 +55,7 @@ function hapusakun($nis_nip){
 	}
 
 
-
+require '../phpqrcode/qrlib.php';
 	function tambahakun($data){
 		global $koneksi;
 	
@@ -68,8 +68,14 @@ function hapusakun($nis_nip){
 		$pass = htmlspecialchars($data["pass"]);
 
 
-		$query = "INSERT INTO `tb_akun` (`nis_nip`, `nama_lengkap`, `jenis_kelamin`, `kelas`, `id_posisi`, `status`, `pass`) 
-		VALUES ('$nisnip', '$namalengkap', '$jeniskelamin', '$kelas', '$idposisi', '$status', '$pass');";
+
+		$qr_code_data = "$nisnip";
+		 $qr_code_filename = "../aset/gambarqr/$namalengkap $kelas.png"; // Nama file QR Code sesuai
+		QRcode::png($qr_code_data, $qr_code_filename, 'H', 10);
+
+
+		$query = "INSERT INTO `tb_akun` (`nis_nip`, `nama_lengkap`, `jenis_kelamin`, `kelas`, `id_posisi`, `status`, `pass`, `qr`) 
+		VALUES ('$nisnip', '$namalengkap', '$jeniskelamin', '$kelas', '$idposisi', '$status', '$pass', 'http://localhost/PROJECTS3/aset/gambarqr/$namalengkap $kelas.png');";
 		
 		mysqli_query($koneksi, $query);
 	
@@ -273,11 +279,27 @@ function hapuskandidat($id_kandidat){
 		$misi = htmlspecialchars($data["misi"]);
 		$id_ketua = htmlspecialchars($data["id_ketua"]);
 		$id_wakil = htmlspecialchars($data["id_wakil"]);
+		$gambar = htmlspecialchars($data["gambar"]);
 
 
-		$query = "INSERT INTO `tb_kandidat` (`id_kandidat`, `visi`, `misi`, `id_ketua`, `id_wakil`) 
-		VALUES ('$id_kandidat', '$visi', '$misi', '$id_ketua', '$id_wakil');";
+		$query = "INSERT INTO `tb_kandidat` (`id_kandidat`, `visi`, `misi`, `id_ketua`, `id_wakil`, `gambar`) 
+		VALUES ('$id_kandidat', '$visi', '$misi', '$id_ketua', '$id_wakil', '$gambar');";
 		
+		mysqli_query($koneksi, $query);
+	
+		return mysqli_affected_rows($koneksi);
+	}
+
+	// CRUD VOTING
+	function tambahvoting($data){
+		global $koneksi;
+	
+		$nis_nip = htmlspecialchars($data["nis_nip"]);
+		$id_kandidat = htmlspecialchars($data["id_kandidat"]);
+	
+		$query = "INSERT INTO `tb_voting` (`tgl_memilih`, `nis_nip`, `id_kandidat`)
+				  VALUES (NOW(), '$nis_nip', '$id_kandidat');";
+	
 		mysqli_query($koneksi, $query);
 	
 		return mysqli_affected_rows($koneksi);
