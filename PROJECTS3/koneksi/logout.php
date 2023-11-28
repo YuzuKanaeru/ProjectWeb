@@ -3,6 +3,6 @@ session_start();
 session_unset();
 session_destroy();
  
-header("Location: ../Frontend/index.php");
+header("Location: ../admin/login.php");
 exit();
 ?>
