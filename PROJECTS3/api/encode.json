@@ -1,0 +1,82 @@
+[
+    {
+        "nis_nip": "1",
+        "nama_lengkap": "Billy penyusup",
+        "jenis_kelamin": "Laki - Laki",
+        "kelas": "tif b",
+        "id_posisi": "01",
+        "status": "Belum Voting",
+        "pass": "1",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/1 1.png"
+    },
+    {
+        "nis_nip": "1122233344",
+        "nama_lengkap": "Alvina Sugiarti",
+        "jenis_kelamin": "Perempuan",
+        "kelas": "8A",
+        "id_posisi": "01",
+        "status": "Belum Voting",
+        "pass": "vin222",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Alvina Sugiarti 8A.png"
+    },
+    {
+        "nis_nip": "120803",
+        "nama_lengkap": "Maaf yah udah hack :)",
+        "jenis_kelamin": "Perempuan",
+        "kelas": "TK A",
+        "id_posisi": "01",
+        "status": "Belum Voting",
+        "pass": "120803",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Maaf yah udah hack :) Pinjam Dlu Seratus.png"
+    },
+    {
+        "nis_nip": "1234567",
+        "nama_lengkap": "Alfandy Jaelani Putra",
+        "jenis_kelamin": "Laki - Laki",
+        "kelas": "8A",
+        "id_posisi": "01",
+        "status": "Belum Voting",
+        "pass": "al123",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Alfandy Jaelani Putra 8A.png"
+    },
+    {
+        "nis_nip": "1927",
+        "nama_lengkap": "Naufal Hilmy",
+        "jenis_kelamin": "Laki - Laki",
+        "kelas": "9c",
+        "id_posisi": "03",
+        "status": "Belum Voting",
+        "pass": "1",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Naufal Hilmy 9c.png"
+    },
+    {
+        "nis_nip": "3344556",
+        "nama_lengkap": "halooo",
+        "jenis_kelamin": "Perempuan",
+        "kelas": "8B",
+        "id_posisi": "03",
+        "status": "Belum Voting",
+        "pass": "hh111",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/halooo 8B.png"
+    },
+    {
+        "nis_nip": "99",
+        "nama_lengkap": "re",
+        "jenis_kelamin": "Laki - Laki",
+        "kelas": "8A",
+        "id_posisi": "03",
+        "status": "Belum Voting",
+        "pass": "99",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/re 8A.png"
+    },
+    {
+        "nis_nip": "e4",
+        "nama_lengkap": "imm",
+        "jenis_kelamin": "Laki - Laki",
+        "kelas": "8A",
+        "id_posisi": "01",
+        "status": "Sudah Voting",
+        "pass": "1",
+        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/imm 8A.png"
+    }
+]
