@@ -14,16 +14,26 @@ require '../KONEKSI/koneksi.php';
 $query = query("SELECT * FROM tb_akun");
 ?>
 
-<a href="tambahakun.php" type="button" class="btn btn-info fw-bold text-white mb-4">Tambah data</a>
+<a href="tambahakun.php" type="button" class="btn btn-info fw-bold text-white me-3 mb-4">Tambah Akun</a>
+<button type="button" data-toggle="modal" data-target="#downloadqr" class="btn btn-info fw-bold text-white mb-4">Download QR</button>
+
+
+    <div class="col-sm-12">
+        <!-- ... rest of your code ... -->
+
+    </div>
+
 
 <div class="col-sm-12">
-    <div class="card-header py-3 bg-light">
+    <div class="card-header py-2 bg-light d-flex justify-content-between align-items-center">
         <h5 class="m-0 text-white">Data Pengguna</h5>
-        <div class="col-sm-12 search-container-left">
-        <input class="form-control text-right bg-dark border-0 mb-2" id="searchInput" placeholder="Cari...">
+        <div class="col-sm-2">
+            <input class="form-control text-right bg-dark border-0 mb-1" id="searchInput" placeholder="Cari...">
+        </div>
     </div>
-    </div>
-    <div class="bg-secondary rounded h-100 p-3">
+    <div class="bg-secondary rounded h-100 p-4">
+
+    
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -76,6 +86,34 @@ $query = query("SELECT * FROM tb_akun");
         </div>
     </div>
 <?php endforeach; ?>
+
+
+
+<div class="modal fade" id="downloadqr" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content bg-secondary">
+                <div class="modal-body">
+                    
+                    <h5 class="text-center mt-2 mb-3">Download QR Kelas</h5>
+                    <label for="formGroupExampleInput">Pilih Kelas</label>
+                <form action="downloadqr.php" method="post">
+<select name="kelas" class=" bg-dark form-select form-control" aria-label="Default select example">
+<option value="8A">8A</option>
+<option value="8B">8B</option>
+<option value="8B">8C</option>
+<option value="9A">9A</option>
+<option value="9B">9B</option>
+</select>
+                </div>
+                <div class="modal-footer">
+                    
+                    <button name="download" type="submit" class="btn btn-primary m-2">Download Zip</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Tidak</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
 
 <br>
 <br>
