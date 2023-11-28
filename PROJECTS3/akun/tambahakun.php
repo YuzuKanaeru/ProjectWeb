@@ -78,7 +78,7 @@ if( isset($_POST["submit"]) ) {
                 </div> -->
 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">Nis/Nip</label>
+					<label for="formGroupExampleInput">Nis</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="nis_nip" placeholder="Masukkan Nis Atau Nip"  >
                 </div>
 
@@ -99,6 +99,8 @@ if( isset($_POST["submit"]) ) {
 					<label for="formGroupExampleInput">Kelas</label>
 					<input required type="text" class="mt-1 mb-3 form-control" name="kelas" placeholder="Masukkan Kelas"  >
                 </div>
+
+                <input hidden required type="text" class="mt-1 mb-3 form-control" name="status" value="Belum Voting">
 
                 <!-- <div class="form-group col-sm-6">
                     <label for="formGroupExampleInput text-dark">Pilih Posisi</label>
@@ -125,10 +127,10 @@ if( isset($_POST["submit"]) ) {
 					<input required type="text" class="mt-1 mb-3 form-control" name="id_posisi" placeholder="Masukkan Id Posisi"  >
                 </div>
 
-                <div class="form-group col-sm-6">
+                <!-- <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">Status</label>
 					<input type="text" class="mt-1 mb-3 form-control" name="status" placeholder="Masukkan Status"  >
-                </div>
+                </div> -->
 
                 <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">Pasword</label>

@@ -75,7 +75,7 @@ ob_start();
 			<div class="form mt-3 row">
                 
 				<div class="form-group col-sm-6">
-					<label for="formGroupExampleInput2">Nis/Nip</label>
+					<label for="formGroupExampleInput2">Nis</label>
 					<input  type="text" class=" mt-1 mb-3 form-control" name="nis_nip" value="<?= $swa["nis_nip"] ?>" nis_nip="nis_nip" readonly>
                 </div>
 
@@ -173,5 +173,3 @@ $konten= ob_get_clean();
 include '../ADMIN/body.php';
 
 ?>
-
-
