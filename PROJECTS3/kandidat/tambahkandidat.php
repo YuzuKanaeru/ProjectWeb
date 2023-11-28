@@ -101,6 +101,11 @@ if( isset($_POST["submit"]) ) {
 					<input required type="text" class="mt-1 mb-3 form-control" name="id_wakil" placeholder="Masukkan id wakil"  >
                 </div>
 
+                <div class="form-group col-sm-6">
+					<label for="formGroupExampleInput">Id Wakil</label>
+					<input required type="file" class="mt-1 mb-3 bg-dark form-control" name="gambar" placeholder="Pilih Gambar Kandidat"  >
+                </div>
+
 				<div class="dasd mt-2 mb-2">
 					<br>
 					<button type="submit" name="submit" class="btn dasd btn-success">Tambah Data</button>

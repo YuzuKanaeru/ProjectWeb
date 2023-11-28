@@ -18,7 +18,7 @@ ob_start();
 
 require '../KONEKSI/koneksi.php';
 
-$query = "SELECT k.id_kandidat, k.visi, k.misi, ketua.nama_ketua, wakil.nama_wakil
+$query = "SELECT k.gambar, k.id_kandidat, k.visi, k.misi, ketua.nama_ketua, wakil.nama_wakil
           FROM tb_kandidat k
           LEFT JOIN tb_ketuaosis ketua ON k.id_ketua = ketua.id_ketua
           LEFT JOIN tb_wakilosis wakil ON k.id_wakil = wakil.id_wakil";
@@ -32,7 +32,7 @@ $data = query($query);
 <div class="d-flex text-center">
 <?php foreach ($data as $item): ?>
 <div class="card me-3" style="width: 20rem;">
-  <img src="../aset/img/gambarosis.webp" class="card-img-top" alt="...">
+  <img src="<?= $item["gambar"]; ?>" class="card-img-top" alt="tidak ada gambar">
   <div class="card-body justify-conten-center text-center">
     <h5 class="card-title text-dark"><?= $item["nama_ketua"]; ?></h5>
     <h6 class="card-title text-dark"><?= $item["nama_wakil"]; ?></h6>
@@ -49,62 +49,33 @@ $data = query($query);
 </div>
 <?php endforeach; ?>
 
-</div>
-
-
-
-        
-        <br>
-        <br>
-        <br>
-        
-        <!-- <div class="col-sm-12 ">
-		<div class="card-header py-3 bg-light">
-			<h5 class="m-0 text-white">Data Kandidat</h5>
-		</div>
-                        <div class="bg-secondary rounded h-100 p-3">
+</div>           
+                                   
                             
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Id Kandidat</th>
-                                        <th scope="col">Visi</th>
-                                        <th scope="col">Misi</th>
-                                        <th scope="col">Nama Ketua</th>
-                                        <th scope="col">Nama Wakil</th>
-                                        <th scope="col">Aksi</th>
-                                       
-
-
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                             
-                                <?php foreach ($data as $item): ?>
+                                <!-- <?php foreach ($data as $item): ?> 
                                 <tr>
                                 <td><?= $item["id_kandidat"]; ?></td>
                                 <td><?= $item["visi"]; ?></td>
                                 <td><?= $item["misi"]; ?></td>
                                 <td><?= $item["nama_ketua"]; ?></td>
                                 <td><?= $item["nama_wakil"]; ?></td>
-                                <td>
-                                    <a class="btn btn-success text-white fw-bold" href="editkandidat.php?id_kandidat=<?= $item["id_kandidat"]; ?>">Edit</a> -->
+                                <td>   -->
+                                    <!-- <a class="btn btn-success text-white fw-bold" href="editkandidat.php?id_kandidat=<?= $item["id_kandidat"]; ?>">Edit</a> 
 
-                                    <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?=$item["id_kandidat"];?>" >Hapus</button> -->
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?=$item["id_kandidat"];?>" >Hapus</button> 
                                                                                                                    
-                                <!-- </td>
-                                </tr>
+                                </td>
+                                </tr> -->
                                  
-                                    <?php endforeach; ?>
+                                    <!-- <?php endforeach; ?>-->
                                     
                                 </tbody>
                             </table>
                        
                         </div>
-                    </div>
+                    </div> 
 
-                    <?php foreach ($data as $getdataa): ?>
+                    <!-- <?php foreach ($data as $getdataa): ?>  -->
 
     <div class="modal fade" id="hapus<?= $getdataa["id_kandidat"]; ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog ">
@@ -119,7 +90,7 @@ $data = query($query);
             </div>
         </div>
     </div>
-<?php endforeach; ?> -->
+<?php endforeach; ?> 
 
 
 <!-- Visi Misi Modal -->

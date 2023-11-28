@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
           echo "
           <script>
               alert('Data berhasil diubah');
-              document.location.href = '.php';
+              document.location.href = 'kandidat.php';
           </script>
           ";
       } else {
