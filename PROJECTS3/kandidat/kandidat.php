@@ -104,14 +104,14 @@ $data = query($query);
       </div>
                 <div class="modal-body">
                 <div class="d-flex">
-                    <img src="../aset/img/gambarosis.webp" class="me-3" style="width: 150px; height: 150px;">
+                    <img src="<?= $getdataaa["gambar"]; ?>" class="me-3" style="width: 150px; height: 150px;">
                     <div class="pp">
                     <h4>Visi</h4>
-                <label for=""><?= $getdataaa["visi"]; ?></label>
+                <textarea style="border: none;" for="" readonly class="bg-secondary text-white"><?= $getdataaa["visi"]; ?></textarea>
                     <br>
                     <br>
                     <h4>Misi</h4>
-                <label for=""><?= $getdataaa["misi"]; ?></label>
+                    <textarea style="border: none;" for="" readonly class="bg-secondary text-white"><?= $getdataaa["misi"]; ?></textarea>
                     </div>
   
                 </div>

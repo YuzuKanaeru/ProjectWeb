@@ -72,7 +72,7 @@ ob_start();
 		<div class="card-body bg-secondary">
 			<div class="form mt-3 row">
                 
-				<div class="form-group col-sm-6">
+				<div class="form-group">
 					<label for="formGroupExampleInput2">Id Kandidat</label>
 					<input  type="text" class=" mt-1 mb-3 form-control" name="id_kandidat" value="<?= $swa["id_kandidat"] ?>" id="id_kandidat" readonly>
                 </div>
@@ -96,6 +96,17 @@ ob_start();
 					<label for="formGroupExampleInput">Id Wakil</label>
 					<input required type="text" class="mt-1 mb-3 form-control"  name="id_wakil" value="<?= $swa["id_wakil"] ?>" id="id_wakil">
                 </div>
+
+
+                <div class="form-group col-sm-6">
+                <label for="formGroupExampleInput">Gambar</label>
+					<input type="file" value="<?= $swa["gambar"] ?>" class="mt-1 mb-3 bg-dark form-control" name="gambar" placeholder="Pilih Gambar Kandidat"  >
+                </div>
+
+      <div class="form-group col-sm-6">
+					
+        <img src="<?= $swa["gambar"] ?>" class="" style="width: 150px; height:150px;" alt="" srcset="">
+      </div>
 
 
 
