@@ -27,39 +27,34 @@ $data = query($query);
 ?>
 
 
-<a href="tambahkandidat.php" type="button" class="btn btn-info fw-bold text-white mb-4">Tambah Data</a>
+<a href="tambahkandidat.php" type="button" class="btn btn-info fw-bold text-white mb-4">Tambah Kandidat</a>
 
-<div class="d-flex text-center">
-<?php foreach ($data as $item): ?>
-<div class="card me-3" style="width: 20rem;">
-  <img src="<?= $item["gambar"]; ?>" class="card-img-top" alt="tidak ada gambar">
-  <div class="card-body justify-conten-center text-center">
-    <h5 class="card-title text-dark"><?= $item["nama_ketua"]; ?></h5>
-    <h6 class="card-title text-dark"><?= $item["nama_wakil"]; ?></h6>
-    <br>
-    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-    <div class="d-flex text-center justify-content-center">
-    <button data-toggle="modal" data-target="#visi<?=$item["id_kandidat"];?>" class="btn btkan btn-success me-2">Visi Misi</button>
-    <a href="editkandidat.php?id_kandidat=<?= $item["id_kandidat"]; ?>" class="btn btn-info me-2">Edit </a>
-    <button data-toggle="modal" data-target="#hapus<?=$item["id_kandidat"];?>" class="btn btn-danger">Hapus</button>
-
-    </div>
-
-  </div>
-</div>
-<?php endforeach; ?>
-
-</div>           
+<div class="d-flex flex-wrap justify-content-center">
+    <?php foreach ($data as $item): ?>
+        <div class="card mb-3 me-3" style="max-width: 20rem;">
+            <img src="<?= $item["gambar"]; ?>" class="card-img-top" alt="tidak ada gambar" style="width: 100%; height: 250px; object-fit: cover;">
+            <div class="card-body text-center">
+                <h5 class="card-title text-dark"><?= $item["nama_ketua"]; ?></h5>
+                <h6 class="card-title text-dark"><?= $item["nama_wakil"]; ?></h6>
+                <div class="d-flex text-center justify-content-center mt-3">
+                    <button data-toggle="modal" data-target="#visi<?= $item["id_kandidat"]; ?>" class="btn btkan btn-success me-2">Visi Misi</button>
+                    <a href="editkandidat.php?id_kandidat=<?= $item["id_kandidat"]; ?>" class="btn btn-info me-2">Edit </a>
+                    <button data-toggle="modal" data-target="#hapus<?= $item["id_kandidat"]; ?>" class="btn btn-danger">Hapus</button>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div> 
                                    
                             
-                                <!-- <?php foreach ($data as $item): ?> 
-                                <tr>
+                                <!-- <?php foreach ($data as $item): ?>  -->
+                                <!-- <tr>
                                 <td><?= $item["id_kandidat"]; ?></td>
                                 <td><?= $item["visi"]; ?></td>
                                 <td><?= $item["misi"]; ?></td>
                                 <td><?= $item["nama_ketua"]; ?></td>
                                 <td><?= $item["nama_wakil"]; ?></td>
-                                <td>   -->
+                                <td> -->
                                     <!-- <a class="btn btn-success text-white fw-bold" href="editkandidat.php?id_kandidat=<?= $item["id_kandidat"]; ?>">Edit</a> 
 
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?=$item["id_kandidat"];?>" >Hapus</button> 
@@ -67,15 +62,15 @@ $data = query($query);
                                 </td>
                                 </tr> -->
                                  
-                                    <!-- <?php endforeach; ?>-->
+                                    <!-- <?php endforeach; ?> -->
                                     
-                                </tbody>
+                                <!-- </tbody>
                             </table>
                        
                         </div>
-                    </div> 
+                    </div>   -->
 
-                    <!-- <?php foreach ($data as $getdataa): ?>  -->
+                    <?php foreach ($data as $getdataa): ?> 
 
     <div class="modal fade" id="hapus<?= $getdataa["id_kandidat"]; ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog ">
@@ -100,7 +95,7 @@ $data = query($query);
             <div class="modal-content bg-secondary">
             <div class="modal-header">
         <h5 class="modal-title">Visi & Misi</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
                 <div class="modal-body">
                 <div class="d-flex">
@@ -121,8 +116,8 @@ $data = query($query);
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Tidak</button>
-                    <a href="hapuskandidat.php?id_kandidat=<?= $getdataa["id_kandidat"]; ?>" class="btn btn-primary">Hapus</a>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                    <!-- <a href="hapuskandidat.php?id_kandidat=<?= $getdataa["id_kandidat"]; ?>" class="btn btn-primary">Hapus</a> -->
                 </div>
             </div>
         </div>
