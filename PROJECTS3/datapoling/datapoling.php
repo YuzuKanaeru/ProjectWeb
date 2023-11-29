@@ -96,12 +96,11 @@ $infoResult = $db->query($infoQuery);
         if ($infoResult->num_rows > 0) {
             while ($infoRow = $infoResult->fetch_assoc()) {
         ?>
-                <div class="row mb-3">
-                    <div class="col-md-4">
+                <div class="row mb-4 ">
+                    <div class=" d-flex">
                         <!-- Gambar -->
-                        <img src="<?php echo $infoRow['gambar']; ?>" class="card-img-top" alt="..." style="width: 100%; height: auto;">
-                    </div>
-                    <div class="col-md-8">
+                        <img src="<?php echo $infoRow['gambar']; ?>" class="card-img-top me-4" alt="..." style="width: 150px; height: 150px;">
+                    
                         <!-- Teks -->
                         <p>
                             Nomor Kandidat: <?php echo $infoRow['id_kandidat']; ?><br>
@@ -119,9 +118,11 @@ $infoResult = $db->query($infoQuery);
         ?>
     </div>
 </div>
+</div>
 
-
-
+<br>
+<br>
+<br>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="../aset/lib/chart/chart.min.js"></script>
@@ -158,5 +159,7 @@ $infoResult = $db->query($infoQuery);
 <?php
 $konten = ob_get_clean();
 
+
 include '../ADMIN/body.php';
+
 ?>
