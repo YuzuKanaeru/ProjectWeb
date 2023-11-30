@@ -3,11 +3,11 @@
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $id_kandidat = $_GET["id_kandidat"];
 
 $swa = query("SELECT * FROM tb_kandidat WHERE id_kandidat = '$id_kandidat'")[0];
@@ -40,7 +40,12 @@ ob_start();
 ?>
 
 <style>
-  .form-control{
+  
+  label{
+    color: #fff;
+  }
+   .form-control{
+    color: #fff;
     border-radius:7px;
   }
   .ff{
@@ -74,7 +79,7 @@ ob_start();
                 
 				<div class="form-group">
 					<label for="formGroupExampleInput2">Id Kandidat</label>
-					<input  type="text" class=" mt-1 mb-3 form-control" name="id_kandidat" value="<?= $swa["id_kandidat"] ?>" id="id_kandidat" readonly>
+					<input  type="text" class="bg-dark mt-1 mb-3 form-control" name="id_kandidat" value="<?= $swa["id_kandidat"] ?>" id="id_kandidat" readonly>
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -134,7 +139,7 @@ ob_start();
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
 

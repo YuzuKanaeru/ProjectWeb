@@ -16,7 +16,7 @@ ob_start();
 <?php
 
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 
 $query = "SELECT k.gambar, k.id_kandidat, k.visi, k.misi, ketua.nama_ketua, wakil.nama_wakil
           FROM tb_kandidat k
@@ -146,6 +146,6 @@ myModal.addEventListener('shown.bs.modal', () => {
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>

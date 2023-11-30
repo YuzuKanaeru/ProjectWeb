@@ -2,7 +2,7 @@
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 

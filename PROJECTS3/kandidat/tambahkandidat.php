@@ -7,11 +7,11 @@ ob_start();
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 
 $query = "SELECT id_kandidat FROM tb_kandidat ORDER BY id_kandidat DESC LIMIT 1";
 $result = mysqli_query($koneksi, $query);
@@ -64,6 +64,11 @@ if( isset($_POST["submit"]) ) {
 
 <style>
   .form-control{
+    color: #fff;
+    border-radius:7px;
+  }
+  .form-select{
+    color: #fff;
     border-radius:7px;
   }
   .ff{
@@ -91,7 +96,7 @@ if( isset($_POST["submit"]) ) {
 		</div>
         
 		<div class="card-body bg-secondary">
-			<div class="form mt-3 row">
+			<div class="form text-white mt-3 row">
                 
 				<!-- <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">ID Pengguna</label>
@@ -178,6 +183,6 @@ if( isset($_POST["submit"]) ) {
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
