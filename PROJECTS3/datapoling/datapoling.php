@@ -43,15 +43,15 @@ ob_start(); // Mulai output buffering
 <?php
 // Koneksi database
 $dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'vosis';
+$dbUsername = 'sivosism_db';
+$dbPassword = '26Desember2003.';
+$dbName = 'sivosism_db';
 
 // Membuat koneksi
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 // Query SQL untuk mendapatkan informasi jumlah voting
-$query = "SELECT tb_kandidat.id_kandidat, COUNT(tb_voting.id_kandidat) AS jumlah_voting 
+$query = "select tb_kandidat.id_kandidat, COUNT(tb_voting.id_kandidat) AS jumlah_voting 
           FROM tb_voting 
           JOIN tb_akun ON tb_voting.nis_nip = tb_akun.nis_nip 
           JOIN tb_kandidat ON tb_voting.id_kandidat = tb_kandidat.id_kandidat 
@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
 }
 
 // Query SQL untuk mendapatkan informasi nama ketua, nama wakil ketua, dan jumlah voting
-$infoQuery = "SELECT tb_kandidat.gambar, tb_kandidat.id_kandidat, tb_ketuaosis.nama_ketua, tb_wakilosis.nama_wakil, COUNT(tb_voting.id_kandidat) AS jumlah_voting
+$infoQuery = "select tb_kandidat.gambar, tb_kandidat.id_kandidat, tb_ketuaosis.nama_ketua, tb_wakilosis.nama_wakil, COUNT(tb_voting.id_kandidat) AS jumlah_voting
                 FROM tb_ketuaosis
                 JOIN tb_kandidat ON tb_ketuaosis.id_ketua = tb_kandidat.id_ketua
                 LEFT JOIN tb_wakilosis ON tb_kandidat.id_wakil = tb_wakilosis.id_wakil
@@ -102,7 +102,7 @@ $infoResult = $db->query($infoQuery);
                         <img src="<?php echo $infoRow['gambar']; ?>" class="card-img-top me-4" alt="..." style="width: 150px; height: 150px;">
                     
                         <!-- Teks -->
-                        <p>
+                        <p class="text-white">
                             Nomor Kandidat: <?php echo $infoRow['id_kandidat']; ?><br>
                             Ketua: <?php echo $infoRow['nama_ketua']; ?><br>
                             Wakil Ketua: <?php echo $infoRow['nama_wakil']; ?><br>
@@ -160,6 +160,6 @@ $infoResult = $db->query($infoQuery);
 $konten = ob_get_clean();
 
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
