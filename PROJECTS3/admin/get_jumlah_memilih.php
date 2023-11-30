@@ -3,9 +3,9 @@
 
 // Koneksi database
 $dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'vosis';
+$dbUsername = 'sivosism_db';
+$dbPassword = '26Desember2003.';
+$dbName = 'sivosism_db';
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 // Query SQL untuk mendapatkan jumlah yang sudah memilih

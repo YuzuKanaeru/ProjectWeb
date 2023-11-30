@@ -14,7 +14,7 @@ ob_start();
 ?>
 
 <?php
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun where status = 'Sudah Voting';");
 
 ?>
@@ -27,7 +27,7 @@ $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun wh
 		</div>
                         <div class="bg-secondary rounded h-100 p-3">
                             
-                            <table class="table table-hover">
+                            <table class="table text-white table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nis</th>
@@ -81,7 +81,12 @@ $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun wh
             </div>
         </div>
     </div>
+    
 <?php endforeach; ?>
+
+<div class="dasd text-end">
+<button type="submit" name="submit" class=" mb-5 mt-4 btn dasd btn-danger"><a class="text-white" href="dashboard.php">Kembali</a> </button>
+</div>
 
 
 
@@ -99,6 +104,8 @@ $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun wh
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
+
+
 
 ?>

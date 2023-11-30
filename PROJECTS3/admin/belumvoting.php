@@ -14,31 +14,29 @@ ob_start();
 ?>
 
 <?php
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun where status != 'Sudah Voting';");
 
 ?>
         
         <!-- <a href="tambahakun.php" type="button" class="btn btn-info fw-bold text-white mb-4">Tambah data</a> -->
         
-        <div class="col-sm-12 ">
-		<div class="card-header py-3 bg-light">
-			<h5 class="m-0 text-white">Data Sudah Voting</h5>
-		</div>
+<div class="col-sm-12">
+    <div class="card-header py-2 bg-light d-flex justify-content-between align-items-center">
+        <h5 class="m-0 text-white">Data Belum Voting</h5>
+        <div class="col-sm-2">
+            <input class="form-control text-right bg-dark border-0 mb-1" id="searchInput" placeholder="Cari...">
+        </div>
+    </div>
                         <div class="bg-secondary rounded h-100 p-3">
                             
-                            <table class="table table-hover">
+                            <table class="table text-white table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nis</th>
                                         <th scope="col">Nama Lengkap</th>
                                         <th scope="col">Jenis Kelamin</th>
                                         <th scope="col">Kelas</th>
-                                       
-                                       
-
-
-                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -83,6 +81,10 @@ $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun wh
     </div>
 <?php endforeach; ?>
 
+<div class="dasd text-end">
+<button type="submit" name="submit" class=" mb-5 mt-4 btn dasd btn-danger"><a class="text-white" href="dashboard.php">Kembali</a> </button>
+</div>
+
 
 
                     <br>
@@ -94,11 +96,21 @@ $query=query("SELECT nis_nip, nama_lengkap, jenis_kelamin, kelas FROM tb_akun wh
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#searchInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("table tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 // ref koneksi/koneksi
-include '../KONEKSI/koneksi.php';
+include '../koneksi/koneksi.php';
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
@@ -62,12 +62,12 @@ if (isset($_POST['nis_nip'])) {
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-<link href="../ASET/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="../ASET/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+<link href="../aset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="../aset/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-<link href="../ASET/css/bootstrap.min.css" rel="stylesheet">
+<link href="../aset/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="../ASET/css/style.css" rel="stylesheet">
+<link href="../aset/css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid position-relative d-flex p-0">
@@ -141,13 +141,13 @@ if (isset($_POST['nis_nip'])) {
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/chart/chart.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/easing/easing.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/waypoints/waypoints.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/owlcarousel/owl.carousel.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/tempusdominus/js/moment.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/tempusdominus/js/moment-timezone.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
-<script src="../ASET/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/chart/chart.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/easing/easing.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/waypoints/waypoints.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/owlcarousel/owl.carousel.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/tempusdominus/js/moment.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/tempusdominus/js/moment-timezone.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
+<script src="../aset/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" type="224a743898cd39c0fb817f05-text/javascript"></script>
 
 <!-- <script src="../ASET/js/main.js" type="224a743898cd39c0fb817f05-text/javascript"></script> -->
 

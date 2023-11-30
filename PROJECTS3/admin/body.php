@@ -34,26 +34,13 @@
             <!-- konten ini untuk menampilkan data dari database -->
 
             </div>
-            
-           
-
-
-
-
-           
-
-
-
-
-           
-
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 mb-3 px-4">
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
                         <div class=" text-center ">
-                            &copy; <a href="#">Alviyna</a>, All Right Reserved. 
+                            &copy; <a href="#">Si-Vosis</a>, All Right Reserved. 
                         </div>
 
 
@@ -81,17 +68,17 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../ASET/lib/chart/chart.min.js"></script>
-    <script src="../ASET/lib/easing/easing.min.js"></script>
-    <script src="../ASET/lib/waypoints/waypoints.min.js"></script>
-    <script src="../ASET/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../ASET/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../ASET/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="../ASET/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="../aset/lib/chart/chart.min.js"></script>
+    <script src="../aset/lib/easing/easing.min.js"></script>
+    <script src="../aset/lib/waypoints/waypoints.min.js"></script>
+    <script src="../aset/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../aset/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../aset/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../aset/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../ASET/js/main.js"></script>
+    <script src="../aset/js/main.js"></script>
 </body>
 
 </html>

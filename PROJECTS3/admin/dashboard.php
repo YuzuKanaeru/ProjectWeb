@@ -36,9 +36,9 @@ ob_start(); // Mulai output buffering
 <?php
 // Koneksi database
 $dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'vosis';
+$dbUsername = 'sivosism_db';
+$dbPassword = '26Desember2003.';
+$dbName = 'sivosism_db';
 
 // Membuat koneksi
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
@@ -100,7 +100,7 @@ $infoResult = $db->query($infoQuery);
     <!-- Card Sudah Memilih -->
 <div class="col-sm-12 col-xl-6">
     <div class="bg-secondary rounded h-100 p-4" data-toggle="modal" data-target="#modalMemilih">
-        <h6 class="mb-4">Sudah Memilih</h6>
+        <h6 class="mb-4">Sudah Voting</h6>
         <p>Jumlah Akun yang Sudah Memilih: <?php echo $jumlahSudahMemilih; ?></p>
         <a href="sudahvoting.php" type="button" class="btn btn-info fw-bold text-white mb-4">Lihat Detail</a>
     </div>
@@ -109,15 +109,19 @@ $infoResult = $db->query($infoQuery);
 <!-- Card Belum Memilih -->
 <div class="col-sm-12 col-xl-6">
     <div class="bg-secondary rounded h-100 p-4" data-toggle="modal" data-target="#modalBelumMemilih">
-        <h6 class="mb-4">Belum Memilih</h6>
+        <h6 class="mb-4">Belum Voting</h6>
         <p>Jumlah Akun yang Belum Memilih: <?php echo $jumlahBelumMemilih; ?></p>
         <a href="belumvoting.php" type="button" class="btn btn-info fw-bold text-white mb-4">Lihat Detail</a>
     </div>
 </div>
 </div>
 
+<br>
+<br>
+<br>
+
 <?php
 $konten = ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 ?>

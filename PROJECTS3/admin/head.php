@@ -12,13 +12,13 @@ if (!isset($_SESSION['nama_lengkap'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>ALVINA</title>
+    <title>SI_VOSIS</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="../ASET/img/favicon.ico" rel="icon">
+    <link href="../aset/img/logoosis.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,14 +30,14 @@ if (!isset($_SESSION['nama_lengkap'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../ASET/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../ASET/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../aset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../aset/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../ASET/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../aset/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../ASET/css/style.css" rel="stylesheet">
+    <link href="../aset/css/style.css" rel="stylesheet">
 </head>
 
 <body>

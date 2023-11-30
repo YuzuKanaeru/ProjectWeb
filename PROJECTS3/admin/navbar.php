@@ -24,7 +24,7 @@ function contohAksi() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirect ke logout.php atau tempat logout sesuai kebutuhan
-            window.location.href = '../KONEKSI/logout.php';
+            window.location.href = '../koneksi/logout.php';
         }
     });
 }
@@ -39,7 +39,7 @@ function contohAksi() {
                     <i class="fa fa-bars"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
-                    <input class="form-control  text-center bg-dark border-0" valu="" id="jamInput" readonly type="search">
+                     <input class="form-control  text-center bg-dark text-white border-0" valu="" id="jamInput" readonly type="search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <!-- <div class="nav-item dropdown">
@@ -60,7 +60,7 @@ function contohAksi() {
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="../ASET/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../aset/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">Jhon send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -70,7 +70,7 @@ function contohAksi() {
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="../ASET/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../aset/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">Jhon send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -107,8 +107,8 @@ function contohAksi() {
                     </div> -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="../ASET/img/user.png" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Hello, 
+                            <img class="rounded-circle me-lg-2" src="../aset/img/user.png" alt="" style="width: 40px; height: 40px;">
+                            <span class="text-white d-none d-lg-inline-flex">Hello,  
                                 <?php echo $_SESSION['nama_lengkap']; ?>
                             </span>
                         </a>

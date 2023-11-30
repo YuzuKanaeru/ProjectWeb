@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $pass = $_POST['pass'];
 
     // Buat kueri SQL menggunakan prepared statement
-    $sql = "SELECT * FROM tb_akun WHERE nis_nip = ? AND pass = ?";
+    $sql = "SELECT * FROM tb_akun WHERE nis_nip = ? AND pass = ? AND id_posisi = '01'";
     $stmt = mysqli_prepare($koneksi, $sql);
 
     if ($stmt) {
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
             header("Location: dashboard.php");
             exit();
         } else {
-            $login_salah = "NIS/NIP atau kata sandi Anda salah. Silakan coba lagi!";
+            $login_salah = "NIP atau kata sandi Anda salah. Silakan coba lagi!";
         }
 
         mysqli_stmt_close($stmt);
@@ -65,14 +65,14 @@ if (isset($_POST['submit'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../ASET/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../ASET/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../aset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../aset/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../ASET/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../aset/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../ASET/css/style.css" rel="stylesheet">
+    <link href="../aset/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
                         <form action="" method="POST">
                         <div class="form-floating mb-3">
                             <input type="text" name="nis_nip" class="form-control" id="nis" placeholder="Masukkan nis atau nip">
-                            <label for="floatingInput">Nis atau Nip</label>
+                            <label for="floatingInput">Nip</label>
                         </div>
                         <div class="form-floating mb-4">
                             <input type="password" name="pass" class="form-control" id="pass" placeholder="Masukkan Password">
@@ -113,7 +113,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary py-3 w-100 mb-4">Login</button>
                         </form>
-                        <p class="text-center mb-0">Belum mempunyai akun? <a href="regis.php">Register</a></p>
+                        <!-- <p class="text-center mb-0">Belum mempunyai akun? <a href="regis.php">Register</a></p> -->
                     </div>
                     
                 </div>
@@ -126,16 +126,16 @@ if (isset($_POST['submit'])) {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../ASET/lib/chart/chart.min.js"></script>
-    <script src="../ASET/lib/easing/easing.min.js"></script>
-    <script src="../ASET/lib/waypoints/waypoints.min.js"></script>
-    <script src="../ASET/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../ASET/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../ASET/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="../ASET/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="../aset/lib/chart/chart.min.js"></script>
+    <script src="../aset/lib/easing/easing.min.js"></script>
+    <script src="../aset/lib/waypoints/waypoints.min.js"></script>
+    <script src="../aset/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../aset/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../aset/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../aset/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../ASET/js/main.js"></script>
+    <script src="../aset/js/main.js"></script>
 </body>
 
 </html>
