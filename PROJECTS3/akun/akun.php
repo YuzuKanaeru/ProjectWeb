@@ -10,7 +10,7 @@ ob_start(); // Mulai output buffering
 ?>
 
 <?php
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $query = query("SELECT * FROM tb_akun");
 ?>
 
@@ -34,7 +34,7 @@ $query = query("SELECT * FROM tb_akun");
     <div class="bg-secondary rounded h-100 p-4">
 
     
-        <table class="table table-hover">
+        <table class="table table-hover text-white">
             <thead>
                 <tr>
                     <th scope="col">Nis</th>
@@ -139,5 +139,5 @@ $query = query("SELECT * FROM tb_akun");
 <?php
 $konten = ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 ?>

@@ -2,9 +2,9 @@
 if (isset($_POST['download'])) {
     // Koneksi ke database (ganti dengan informasi koneksi Anda)
     $host = 'localhost';
-    $username = 'root';
-    $password = '';
-    $database = 'vosis';
+    $username = 'sivosism_db';
+    $password = '26Desember2003.';
+    $database = 'sivosism_db';
     $koneksi = mysqli_connect($host, $username, $password, $database);
 
     // Periksa koneksi
