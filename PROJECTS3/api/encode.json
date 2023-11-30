@@ -1,82 +1,34 @@
 [
     {
-        "nis_nip": "1",
-        "nama_lengkap": "Billy penyusup",
-        "jenis_kelamin": "Laki - Laki",
-        "kelas": "tif b",
-        "id_posisi": "01",
-        "status": "Belum Voting",
-        "pass": "1",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/1 1.png"
+        "id_kandidat": "01",
+        "visi": "menciptakan lingkungan sekolah yang harmonis dan berdaya saing",
+        "misi": "Meningkatkan partisipasi siswa dalam kegiatan ektrakulikuler dan pembinaan diri. ",
+        "nama_ketua": "Alvina Sugiarti",
+        "nama_wakil": "Alfandy Jaelani Putra",
+        "gambar": "https:\/\/sivosis.my.id\/aset\/gambarkandidat\/656816a7663ff.jpg"
     },
     {
-        "nis_nip": "1122233344",
-        "nama_lengkap": "Alvina Sugiarti",
-        "jenis_kelamin": "Perempuan",
-        "kelas": "8A",
-        "id_posisi": "01",
-        "status": "Belum Voting",
-        "pass": "vin222",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Alvina Sugiarti 8A.png"
+        "id_kandidat": "02",
+        "visi": "yayayayay",
+        "misi": "ayo semangattt",
+        "nama_ketua": "Muhammad Faturrahman",
+        "nama_wakil": "Yuwandana",
+        "gambar": "https:\/\/sivosis.my.id\/aset\/gambarkandidat\/656816bbdf284.webp"
     },
     {
-        "nis_nip": "120803",
-        "nama_lengkap": "Maaf yah udah hack :)",
-        "jenis_kelamin": "Perempuan",
-        "kelas": "TK A",
-        "id_posisi": "01",
-        "status": "Belum Voting",
-        "pass": "120803",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Maaf yah udah hack :) Pinjam Dlu Seratus.png"
+        "id_kandidat": "03",
+        "visi": "zzzzzzzz",
+        "misi": "pppppppppp",
+        "nama_ketua": "Imam Zakarial Ansori",
+        "nama_wakil": "Naufal Hilmy",
+        "gambar": "https:\/\/sivosis.my.id\/aset\/gambarkandidat\/656816ca42f36.jpeg"
     },
     {
-        "nis_nip": "1234567",
-        "nama_lengkap": "Alfandy Jaelani Putra",
-        "jenis_kelamin": "Laki - Laki",
-        "kelas": "8A",
-        "id_posisi": "01",
-        "status": "Belum Voting",
-        "pass": "al123",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Alfandy Jaelani Putra 8A.png"
-    },
-    {
-        "nis_nip": "1927",
-        "nama_lengkap": "Naufal Hilmy",
-        "jenis_kelamin": "Laki - Laki",
-        "kelas": "9c",
-        "id_posisi": "03",
-        "status": "Belum Voting",
-        "pass": "1",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/Naufal Hilmy 9c.png"
-    },
-    {
-        "nis_nip": "3344556",
-        "nama_lengkap": "halooo",
-        "jenis_kelamin": "Perempuan",
-        "kelas": "8B",
-        "id_posisi": "03",
-        "status": "Belum Voting",
-        "pass": "hh111",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/halooo 8B.png"
-    },
-    {
-        "nis_nip": "99",
-        "nama_lengkap": "re",
-        "jenis_kelamin": "Laki - Laki",
-        "kelas": "8A",
-        "id_posisi": "03",
-        "status": "Belum Voting",
-        "pass": "99",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/re 8A.png"
-    },
-    {
-        "nis_nip": "e4",
-        "nama_lengkap": "imm",
-        "jenis_kelamin": "Laki - Laki",
-        "kelas": "8A",
-        "id_posisi": "01",
-        "status": "Sudah Voting",
-        "pass": "1",
-        "qr": "https:\/\/sivosis.my.id\/aset\/gambarqr\/imm 8A.png"
+        "id_kandidat": "04",
+        "visi": "1. memberika duit gratis setiap siswa",
+        "misi": "1. INFAK 1 MILIAR PERMUNGGU",
+        "nama_ketua": "pinjam dlu seratus",
+        "nama_wakil": "Yuwandana",
+        "gambar": "https:\/\/sivosis.my.id\/aset\/gambarkandidat\/656816d956171.jpeg"
     }
 ]

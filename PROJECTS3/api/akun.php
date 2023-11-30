@@ -10,7 +10,6 @@
         'nis_nip' => $row['nis_nip'],
         'nama_lengkap'=> $row['nama_lengkap'],
         'jenis_kelamin'=> $row['jenis_kelamin'],
-        'nama_lengkap'=> $row['nama_lengkap'],
         'kelas'=> $row['kelas'],
         'id_posisi'=> $row['id_posisi'],
         'status'=> $row['status'],
@@ -30,7 +29,6 @@
         'nis_nip' => $row['nis_nip'],
         'nama_lengkap'=> $row['nama_lengkap'],
         'jenis_kelamin'=> $row['jenis_kelamin'],
-        'nama_lengkap'=> $row['nama_lengkap'],
         'kelas'=> $row['kelas'],
         'id_posisi'=> $row['id_posisi'],
         'status'=> $row['status'],
@@ -40,6 +38,11 @@
     }
     echo json_encode($result);
   }
+
+  $jsonString = json_encode($result, JSON_PRETTY_PRINT);
+
+  file_put_contents('encode.json', $jsonString);
+
   
   mysqli_close($connection);
 

@@ -1,8 +1,8 @@
 <?php
   $host = 'localhost';
-  $user = 'root';
-  $pass = '';
-  $db   = 'vosis';
+  $user = 'sivosism_db';
+  $pass = '26Desember2003.';
+  $db   = 'sivosism_db';
   $connection = mysqli_connect($host, $user, $pass, $db);
 
   if (!$connection) {
