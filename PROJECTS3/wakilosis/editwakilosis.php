@@ -3,19 +3,19 @@
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
 
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $id_wakil = $_GET["id_wakil"];
 
 $swa = query("SELECT * FROM tb_wakilosis WHERE id_wakil = '$id_wakil'")[0];
 
 if (isset($_POST["submit"])) {
-      if (ubahketuaosis($_POST) > 0) {
+      if (ubahwakilosis($_POST) > 0) {
           echo "
           <script>
               alert('Data berhasil diubah');
@@ -42,7 +42,15 @@ ob_start();
 ?>
 
 <style>
+	label{
+    color: #fff;
+  }
   .form-control{
+    color: #fff;
+    border-radius:7px;
+  }
+  .form-select{
+    color: #fff;
     border-radius:7px;
   }
   .ff{
@@ -72,11 +80,11 @@ ob_start();
      
 
 		<div class="card-body bg-secondary">
-			<div class="form mt-3 row">
+			<div class="form text_white mt-3 row">
                 
 				<div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">id Wakil</label>
-					<input  type="text" class=" mt-1 mb-3 form-control" name="id_wakil" value="<?= $swa["id_wakil"] ?>" id_wakil="id_wakil" readonly>
+					<input  type="text" class="bg-dark mt-1 mb-3 form-control" name="id_wakil" value="<?= $swa["id_wakil"] ?>" id_wakil="id_wakil" readonly>
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -92,9 +100,8 @@ ob_start();
                 <div class="form-group col-sm-6">
     <label for="formGroupExampleInput2 text-dark">Jenis Kelamin</label>
     <select required name="jenis_kelamin" id="jenis_kelamin" class="form-select mt-1 mb-3" aria-label="Default select example">
-        <option selected value="<?= $swa["jenis_kelamin"] ?>"><?= $swa["jenis_kelamin"] ?></option>
-        <option value="Laki - Laki">Laki - Laki</option>
-        <option value="Perempuan">Perempuan</option>
+    <option value="Laki Laki" <?= ($swa['jenis_kelamin'] == 'Laki - Laki') ? 'selected' : ''; ?>>Laki - Laki</option>
+                            <option value="Perempuan" <?= ($swa['jenis_kelamin'] == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
     </select>
 </div>
 
@@ -105,41 +112,12 @@ ob_start();
 
                 <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">nomor hp</label>
-					<input required type="text" class="mt-1 mb-3 form-control"  name="nomor_hp" value="<?= $swa["nomor_hp"] ?>" nomor_hp="nomor_hp">
+					<input required type="number" class="mt-1 mb-3 form-control"  name="nomor_hp" value="<?= $swa["nomor_hp"] ?>" nomor_hp="nomor_hp">
                 </div>
-
-
-<!-- <div class="form-group col-sm-6">
-                    <label for="formGroupExampleInput text-dark">nama posisi</label>
-                        <select name="varietas" class="form-select mt-1 mb-3" name="vari_id" aria-label="Default select example">
-                        <option required value="<?= $swa["id_posisi"] ?>"><?= $swa["id_posisi"] ?></option>
-                        <?php
-                        // Lakukan query untuk mendapatkan data varietas dari database
-                        $vari_query = mysqli_query($koneksi, "SELECT id_posisi, jenis_posisi FROM tb_posisi"); //get tabel varietas
-
-                        if ($vari_query) {
-                            while ($getdataa = mysqli_fetch_assoc($vari_query)) {
-                                echo "<option value='" . $getdataa["id_posisi"] . "'>" . $getdataa["jenis_posisi"] . "</option>";
-                        }
-                            } else {
-                            echo "<option value=''>Data varietas tidak tersedia</option>";
-                        }
-
-                        ?>
-                    </select>
-                    </div> -->
-
-
-<!-- <div class="form-group col-sm-6">
-					<label for="formGroupExampleInput">id posisi</label>
-					<input required type="text" class="mt-1 mb-3 form-control"  name="id_posisi" value="<?= $swa["id_posisi"] ?>" idposisi="id_posisi">
-                </div> -->
-
-
 
 				<div class="dasd mt-2 mb-2">
 					<br>
-					<button type="submit" name="submit" class="btn dasd btn-success">Edit Waki; Osis</button>
+					<button type="submit" name="submit" class="btn dasd btn-success">Edit Wakil Osis</button>
 				</div>
 			</form>
 		</div>
@@ -161,7 +139,7 @@ ob_start();
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
 

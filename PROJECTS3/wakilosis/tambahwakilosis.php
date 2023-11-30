@@ -8,18 +8,18 @@ ob_start();
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 
 
 // ambil data 
 if( isset($_POST["submit"]) ) {
 		
   // hubungkan metod dan jika data > 0 / maka terisi succes paham!!
-  if (tambahketuaosis ($_POST) > 0 ) {
+  if (tambahwakilosis ($_POST) > 0 ) {
     echo "
     <script>
         alert('data berhasil ditambahkan');
@@ -127,7 +127,7 @@ if( isset($_POST["submit"]) ) {
 
                 <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">nomor hp</label>
-					<input type="text" class="mt-1 mb-3 form-control" name="nomor_hp" placeholder="Masukkan Nomor Hp"  >
+					<input type="number" class="mt-1 mb-3 form-control" name="nomor_hp" placeholder="Masukkan Nomor Hp"  >
                 </div>
 
 				<div class="dasd mt-2 mb-2">
@@ -155,6 +155,6 @@ if( isset($_POST["submit"]) ) {
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
