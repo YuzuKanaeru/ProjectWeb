@@ -3,13 +3,13 @@
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
 
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $id = $_GET["id_posisi"];
 
 $swa = query("SELECT * FROM tb_posisi WHERE id_posisi = $id")[0];
@@ -43,6 +43,7 @@ ob_start();
 
 <style>
   .form-control{
+    color: #fff;
     border-radius:7px;
   }
   .ff{
@@ -66,13 +67,13 @@ ob_start();
 <form action="" method="POST" enctype="multipart/form-data">
 	<div class=" card bg-secondary rounded mt-3 mb-3">
 		<div class="card-header py-3 bg-light">
-			<h5 class="m-0 text-white">Edit Data Pengguna</h5>
+			<h5 class="m-0 text-white">Edit Data Posisi</h5>
 		</div>
         
      
 
 		<div class="card-body bg-secondary">
-			<div class="form mt-3 row">
+			<div class="form text-white mt-3 row">
                 
 				<div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">id_posisi</label>
@@ -108,7 +109,7 @@ ob_start();
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
 

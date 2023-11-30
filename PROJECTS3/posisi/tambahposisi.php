@@ -8,11 +8,11 @@ ob_start();
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 
 
 // ambil data 
@@ -48,6 +48,9 @@ if( isset($_POST["submit"]) ) {
   .ff{
     float:left;
   }
+  .ff{
+    float:left;
+  }
   .btn{
     border-radius:5px;
 
@@ -70,7 +73,7 @@ if( isset($_POST["submit"]) ) {
 		</div>
         
 		<div class="card-body bg-secondary">
-			<div class="form mt-3 row">
+			<div class="form text-white mt-3 row">
                 
 				<!-- <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">ID Pengguna</label>
@@ -84,7 +87,7 @@ if( isset($_POST["submit"]) ) {
 
                 <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput">jenis_posisi</label>
-					<input required type="text" class="mt-1 mb-3 form-control"  name="alamat" placeholder="Masukkan jenis posisi" id="alamat">
+					<input required type="text" class="mt-1 mb-3 form-control"  name="jenis_posisi" placeholder="Masukkan jenis posisi" >
                 </div>
 
 
@@ -113,6 +116,6 @@ if( isset($_POST["submit"]) ) {
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
