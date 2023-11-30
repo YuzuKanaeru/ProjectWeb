@@ -8,11 +8,11 @@ ob_start();
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 
 
 // ambil data 
@@ -43,6 +43,7 @@ if( isset($_POST["submit"]) ) {
 
 <style>
   .form-control{
+    color: #fff;
     border-radius:7px;
   }
   .ff{
@@ -70,7 +71,7 @@ if( isset($_POST["submit"]) ) {
 		</div>
         
 		<div class="card-body bg-secondary">
-			<div class="form mt-3 row">
+			<div class="form text-white mt-3 row">
                 
 				<!-- <div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">ID Pengguna</label>
@@ -95,8 +96,8 @@ if( isset($_POST["submit"]) ) {
 				<div class="form-group col-sm-6">
                 <label for="formGroupExampleInput2 text-dark">Jenis Kelamin</label>
                 <select required name="jenis_kelamin" id="jenis_kelamin" class="form-select mt-1 mb-3" aria-label="Default select example">
-                <option value="Laki - Laki">Laki - Laki</option>
-                <option value="Perempuan">Perempuan</option>
+                <option value="Laki - Laki" <?= ($swa['jenis_kelamin'] == 'Laki - Laki') ? 'selected' : ''; ?>>Laki - Laki</option>
+                <option value="Perempuan" <?= ($swa['jenis_kelamin'] == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
                 </select>
                 </div>
 
@@ -155,6 +156,6 @@ if( isset($_POST["submit"]) ) {
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>

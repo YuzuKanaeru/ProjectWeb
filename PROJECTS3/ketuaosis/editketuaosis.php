@@ -3,13 +3,13 @@
 session_start();
  
 if (!isset($_SESSION['nama_lengkap'])) {
-    header("Location: ../ADMIN/login.php");
+    header("Location: ../admin/login.php");
     exit(); // Terminate script execution after the redirect
 }
 
 
 
-require '../KONEKSI/koneksi.php';
+require '../koneksi/koneksi.php';
 $id_ketua = $_GET["id_ketua"];
 
 $swa = query("SELECT * FROM tb_ketuaosis WHERE id_ketua = '$id_ketua'")[0];
@@ -42,8 +42,15 @@ ob_start();
 ?>
 
 <style>
-  .form-control{
+   label{
+    color: #fff;
+  }
+   .form-control{
+    color: #fff;
     border-radius:7px;
+  }
+  .form-select{
+    color: #fff;
   }
   .ff{
     float:left;
@@ -76,7 +83,7 @@ ob_start();
                 
 				<div class="form-group col-sm-6">
 					<label for="formGroupExampleInput2">Id Ketua</label>
-					<input  type="text" class=" mt-1 mb-3 form-control" name="id_ketua" value="<?= $swa["id_ketua"] ?>" id_ketua="id_ketua" readonly>
+					<input  type="text" class ="bg-dark mt-1 mb-3 form-control" name="id_ketua" value="<?= $swa["id_ketua"] ?>" id_ketua="id_ketua" readonly>
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -92,9 +99,8 @@ ob_start();
                 <div class="form-group col-sm-6">
     <label for="formGroupExampleInput2 text-dark">Jenis Kelamin</label>
     <select required name="jenis_kelamin" id="jenis_kelamin" class="form-select mt-1 mb-3" aria-label="Default select example">
-        <option selected value="<?= $swa["jenis_kelamin"] ?>"><?= $swa["jenis_kelamin"] ?></option>
-        <option value="Laki - Laki">Laki - Laki</option>
-        <option value="Perempuan">Perempuan</option>
+     <option value="Laki - Laki" <?= ($swa['jenis_kelamin'] == 'Laki - Laki') ? 'selected' : ''; ?>>Laki - Laki</option>
+     <option value="Perempuan" <?= ($swa['jenis_kelamin'] == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
     </select>
 </div>
 
@@ -161,7 +167,7 @@ ob_start();
 <?php
 $konten= ob_get_clean();
 
-include '../ADMIN/body.php';
+include '../admin/body.php';
 
 ?>
 
